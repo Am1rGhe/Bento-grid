@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root{
+    --purple-100: hsl(254, 88%, 90%);
+    --purple-500: hsl(256, 67% ,59%);
+    --yellow-100: hsl(31, 66%, 91%);
+    --yellow-500: hsl(39, 100%, 71%);
+    --black : hsl(0, 0%, 7%);
+
+}
+:root{
+    /* text-preset-1 */
+    --text-preset-1-font: 500 62px/0.935 'DM Sans', sans-serif;
+    --text-preset-1-spacing: -3px;
+    /*text-perset-2 */
+    --text-perset-2-font: 500 40px/0.9 'DM Sans',sans-serif;
+    --text-perset-2-spacing: -2px;
+    /*text-perset-3 */
+    --text-perset-3-font: 500 32px/0.875 'DM Sans',sans-serif;
+    --text-perset-3-spacing: -2px;
+    /*text-perset-4 */
+    --text-perset-4-font: 400 18px/0.111 'DM Sans',sans-serif;
+    --text-perset-4-spacing: 0px;
+    
+}:root {
+    --space-500: 40px;
+    --space-400: 32px;
+    --space-300: 24px;
+    --space-200: 16px;
+    --space-100:  8px;
+}
+
+body{
+    font-family: 'DM Sans',sans-serif;
+    margin: 0;
+    padding: var(--space-400);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.bento-grid{
+    margin: auto;
+    display: grid;
+    gap: var(--space-200);
+    grid-template-columns: repeat(4,255px);
+    grid-auto-rows:80px;
+    grid-template-areas:
+    "box1 box2 box2 box3"
+    "box1 box2 box2 box3"
+    "box1 box2 box2 box3"
+    "box1 box5 box5 box3"
+    "box4 box5 box5 box3"
+    "box4 box5 box5 box3"
+    "box4 box6 box7 box7"
+    "box4 box6 box7 box7"
+    ;
+
+}
+/******************BOX 1******************************************************/
+.box1{
+    grid-area: box1;
+    border-radius: 10px;
+    background-color: var(--yellow-100);
+    padding: var(--space-400);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.box1 p{
+    font: var(--text-perset-2-font);
+    letter-spacing: var(--text-perset-2-spacing);
+}
+.box1 span{
+    color: var(--purple-500);
+}
+.box1 img{
+    width: 191px;
+    height: 91px;
+    object-fit: cover;
+}
+
+/**************************************BOX 2*********************************/
+
+.box2{
+    grid-area: box2;
+    border-radius: 10px;
+    background-color: var(--purple-500);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-400);
+    align-items: center;
+    color: white;
+}
+.box2 h1{
+    font: var(--text-preset-1-font);
+    letter-spacing: var(--text-preset-1-spacing);
+    text-align: center;
+    margin-bottom: var(--space-200);
+    margin-top: 0;
+}
+
+.box2 .yellow{
+    color: var(--yellow-500);
+}
+
+.box2 .stars{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 220px;
+    height: 60px;
+    align-items: center;
+}
+.box2 .stars img{
+    height: 32px;
+    width: 170px;
+    object-fit: cover;
+
+}
+.box2 .stars p{
+    font: var(--text-preset-4-font);
+    letter-spacing: var(--text-preset-4-spacing);
+}
+
+/*********************************box3********************************/
+
+.box3{
+    grid-area: box3;
+    border-radius: 10px;
+    background-color: var(--purple-100);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-400);
+    gap: var(--space-100);
+    align-items: center;
+    overflow: hidden;
+}
+
+.box3 h3{
+    font: var(--text-perset-3-font);
+    letter-spacing: var(--text-preset-3-spacing);
+}
+.box3 img{
+    width: 318px;
+    height: 320px;
+    top: 80px;
+    margin-left: 175px;
+}
+.box3 p{
+    font: var(--text-preset-4-font);
+    letter-spacing: var(--text-preset-4-spacing);
+}
+/*******************************************box4************************************************/
+.box4{
+    grid-area: box4;
+    border-radius: 10px;
+    padding: var(--space-300);
+    background-color: var(--yellow-500);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.box4 h1{
+    font: var(--text-perset-2-font);
+    letter-spacing: var(--text-preset-2-spacing);
+    color: var(--black);
+}
+.box4 img{
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+}
+/**************************box5************************************************/
+
+.box5{
+    grid-area: box5;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-400);
+}
+
+.box5 .left{
+    padding: var(--space-300);
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    align-items: center;
+    border-radius: 10px;
+}
+.box5 .left img{
+    height: 66px;
+    width: 315px;
+    object-fit: cover;
+    margin-left: 130px;
+}
+.box5 .right{
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-200);
+    gap: var(--space-200);
+    background-color: var(--yellow-500);
+    border-radius: 10px;
+    overflow: hidden;
+    
+}
+.box5 .right img{
+    width: 208px;
+    height: 157px;
+    object-fit: cover;
+    margin-top: -40px;
+}
+.box5 h4{
+    font: var(--text-perset-3-font);
+    letter-spacing: var(--text-perset-3-spacing);
+
+}
+/******************************************************box6*********************************************/
+.box6{
+    grid-area: box6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    padding: var(--space-300);
+}
+.texts{
+    margin-top: 0;
+}
+
+.box6 h1{
+    font: var(--text-perset-2-font);
+    letter-spacing: var(--text-perset-2-spacing);
+    margin: 0;
+}
+.box6 p{
+    font: var(--text-perset-4-font);
+    letter-spacing: var(--text-perset-4-spacing);
+}
+.box6 img{
+    width: 170px;
+    height: 70px;
+    object-fit: cover;
+}
+/*****************************************box7************************************/
+.box7{
+    grid-area: box7;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: var(--space-200);
+    background-color: var(--purple-500);
+    color: white;
+    align-items: center;
+}
+.box7 img{
+    width: 170px;
+    height: 150px;
+    object-fit: cover;
+}
+.box7 h1{
+    font: var(--text-perset-2-font);
+    letter-spacing: var(--text-perset-3-spacing);
+}
+
+/***********media query**********************************/
+@media (max-width: 768px) {
+    .bento-grid{
+        grid-template-columns: repeat(2,255px);
+        grid-template-areas: 
+        "box2 box2"
+        "box2 box2"
+        "box2 box2"
+        "box5 box5"
+        "box5 box5"
+        "box5 box5"
+        "box3 box3"
+        "box3 box3"
+        "box7 box7"
+        "box7 box7"
+        "box7 box7"
+        "box6 box6"
+        "box1 box4"
+        "box1 box4"
+        "box1 box4"
+        ;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: var(--space-400);
+        grid-auto-rows: auto;
+
+    }
+    .box3{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .box3 img{
+        margin-left: 0;
+    }
+    .box3 p{
+        text-align: center;
+    }
+    
+    .box6{
+        display: flex;
+        flex-direction:row;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .box6 img{
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .box4{
+        padding: var(--purple-300);
+        padding-left: 20px;
+
+    }
+}
+@media(max-width : 375px){
+    body{
+        padding: var(--space-400).
+    }
+    .bento-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "box2"
+        "box2"
+        "box5"
+        "box3"
+        "box7"
+        "box6"
+        "box1"
+        "box4"
+        ;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        gap: var(--space-400);
+        grid-auto-rows: auto;
+
+    }
+    .box5{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: var(--space-400);
+        overflow: none;
+
+    }
+    .box5 .left{
+        text-align: center;
+    }
+    .box5 .left img{
+        width: 80%;
+        height: 50%;
+        object-fit: cover;
+        margin: 0;
+ 
+    }
+    .box5 .right{
+        text-align: center;
+        overflow: hidden;
+    }
+    .box5 .right img{
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        margin: auto auto;
+        margin-bottom: -40px;
+
+    }
+    .box3{
+        align-items: center;
+        text-align: center;
+
+    }
+    .box3 img{
+        width: 80%;
+        height: 80%;
+        object-fit: cover;
+        margin: auto auto;
+    }
+    .box1 img{
+        margin: 0;
+    }
+    
+}
